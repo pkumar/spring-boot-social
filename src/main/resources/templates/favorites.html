@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta charset="UTF-8" />
+<title>Sample Spring Boot-Thymeleaf application</title>
+</head>
+<body>
+<a href="/">Back to Main</a>
+	<table border="1">
+		<tr th:each="mytweet : ${tweetList}">
+			<td>Tweet text:</td>
+			<td th:text="*{mytweet.text}" />
+			<td>Handle:</td>
+			<td th:text="*{mytweet.fromUser}" />
+		</tr>
+	</table>
+</body>
+</html>

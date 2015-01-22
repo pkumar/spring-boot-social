@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>Sample Spring Boot-Thymeleaf application</title>
+</head>
+<body>
+<form action="#" th:action="@{/favorites}" th:object="${twitterModel}" method="post">
+  <input type="text" th:field="*{handle}" />
+  <input type="submit" />
+</form>
+</body>
+</html>
