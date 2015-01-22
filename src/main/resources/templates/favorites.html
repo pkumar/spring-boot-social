@@ -8,11 +8,11 @@
 <body>
 <a href="/">Back to Main</a>
 	<table border="1">
-		<tr th:each="mytweet : ${tweetList}">
+		<tr th:each="tweet : ${tweetList}">
 			<td>Tweet text:</td>
-			<td th:text="*{mytweet.text}" />
+			<td th:text="*{tweet.text}" />
 			<td>Handle:</td>
-			<td th:text="*{mytweet.fromUser}" />
+			<td th:text="*{tweet.fromUser}" />
 		</tr>
 	</table>
 </body>
