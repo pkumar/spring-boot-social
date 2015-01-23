@@ -20,7 +20,7 @@ public class TweetsController {
   @Autowired
   private Twitter twitter;
 
-  @RequestMapping("/")
+  @RequestMapping("/welcome")
   public String index(Model model) {
     TwitterModel twitterModel = new TwitterModel();
     twitterModel.setHandle(PKTR_HANDLE);

@@ -6,13 +6,24 @@
 <title>Sample Spring Boot-Thymeleaf application</title>
 </head>
 <body>
-<a href="/">Back to Main</a>
-	<table border="1">
-		<tr th:each="tweet : ${tweetList}">
-			<td>Tweet text:</td>
-			<td th:text="*{tweet.text}" />
-			<td>Handle:</td>
-			<td th:text="*{tweet.fromUser}" />
+	<table>
+		<tr valign="top">
+			<td align="right"><a href="/welcome">Back to Main</a></td>
+		</tr>
+		<tr>
+			<td>
+				<table border="1">
+					<tr th:each="tweet : ${tweetList}">
+						<td>Tweet text:</td>
+						<td th:text="*{tweet.text}" />
+						<td>By Handle:</td>
+						<td th:text="*{tweet.fromUser}" />
+						<td>Create Date:</td>
+						<td th:text="*{tweet.createdAt}" />
+					</tr>
+
+				</table>
+			</td>
 		</tr>
 	</table>
 </body>
