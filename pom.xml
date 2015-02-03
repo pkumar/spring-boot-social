@@ -5,7 +5,7 @@
 
 	<groupId>org.pktr</groupId>
 	<artifactId>social-pktr</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<name>Application</name>
@@ -17,7 +17,7 @@
 		<version>1.2.0.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<start-class>com.pktr.social.Application</start-class>
