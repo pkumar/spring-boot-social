@@ -37,4 +37,13 @@ public class TweetsController {
     return "favorites";
   }
 
+  @RequestMapping(value = "/timeline", method = RequestMethod.POST)
+  public String retrieveTweets(@ModelAttribute(value = "twitterModel") TwitterModel twitterModel,
+      Model model) {
+    List<org.springframework.social.twitter.api.Tweet> tweets = twitter.timelineOperations()
+        .getUserTimeline(50);
+    model.addAttribute("tweetList", tweets);
+    return "favorites";
+  }
+
 }
