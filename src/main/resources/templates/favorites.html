@@ -2,23 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <title>Sample Spring Boot-Thymeleaf application</title>
 </head>
 <body>
-	<table>
+	<table class="table">
 		<tr valign="top">
 			<td align="right"><a href="/welcome">Back to Main</a></td>
 		</tr>
 		<tr>
 			<td>
-				<table border="1">
+				<table border="1" class="table table-striped">
+					<tr>
+						<th>Tweet text</th>
+						<th>By Handle</th>
+						<th>Create Date</th>
+					</tr>
 					<tr th:each="tweet : ${tweetList}">
-						<td>Tweet text:</td>
 						<td th:text="*{tweet.text}" />
-						<td>By Handle:</td>
 						<td th:text="*{tweet.fromUser}" />
-						<td>Create Date:</td>
 						<td th:text="*{tweet.createdAt}" />
 					</tr>
 
